@@ -1,19 +1,18 @@
 package au.com.ngv.zabbixAPI
 
-import com.alibaba.fastjson.JSON
-import com.alibaba.fastjson.JSONObject
-
+import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonObject
 
 class RequestObject() : Request
 {
-	val params = HashMap<String, Any>()
+    val params = mutableMapOf<String, JsonElement>()
 
-	override fun paramCount() = params.size
+    override fun paramCount() = params.size
 
-	fun paramEntry(key: String, value: Any): RequestObject {
-		params[key] = value
-		return this
-	}
+    fun paramEntry(key: String, value: JsonElement): RequestObject {
+        params[key] = value
+        return this
+    }
 
-	override fun serialise(): JSON = JSONObject(params)
+    override fun serialise(): JsonObject = JsonObject(params)
 }

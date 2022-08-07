@@ -1,11 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>au.com.ngv.zabbixAPI</groupId>
-	<artifactId>zabbix-api</artifactId>
-	<version>1.0.0</version>
 	<name>zabbix-api</name>
 	<description>Zabbix API for Kotlin</description>
-	<url>https://github.com/enngeevee/zabbix-api</url>
+	<url>https://github.com/kapulkin/zabbix-api</url>
 	<inceptionYear>2022</inceptionYear>
 
 	<licenses>
@@ -18,18 +15,10 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:git:git@github.com:enngeevee/zabbix-api.git</connection>
-		<developerConnection>scm:git:git@github.com:enngeevee/zabbix-api.git</developerConnection>
-		<url>https://github.com/enngeevee/zabbix-api</url>
+		<connection>scm:git:git@github.com:kapulkin/zabbix-api.git</connection>
+		<developerConnection>scm:git:git@github.com:kapulkin/zabbix-api.git</developerConnection>
+		<url>https://github.com/kapulkin/zabbix-api</url>
 	</scm>
-
-	<distributionManagement>
-		<repository>
-			<id>github</id>
-			<name>Zabbix API</name>
-			<url>https://maven.pkg.github.com/enngeevee/zabbix-api</url>
-		</repository>
-	</distributionManagement>
 
 	<properties>
 		<maven.compiler.target>1.7</maven.compiler.target>

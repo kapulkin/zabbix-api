@@ -1,10 +1,10 @@
 package au.com.ngv.zabbixAPI
 
-import com.alibaba.fastjson.JSON
+import kotlinx.serialization.json.JsonElement
 
 interface Request
 {
-	fun paramCount(): Int
+    fun paramCount(): Int
 
-	fun serialise(): JSON
+    fun serialise(): JsonElement
 }

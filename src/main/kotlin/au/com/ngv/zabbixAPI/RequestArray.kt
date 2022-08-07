@@ -1,20 +1,18 @@
 package au.com.ngv.zabbixAPI
 
-import com.alibaba.fastjson.JSON
-import com.alibaba.fastjson.JSONArray
-import java.util.LinkedList
-
+import kotlinx.serialization.json.JsonArray
+import kotlinx.serialization.json.JsonElement
 
 class RequestArray(): Request
 {
-	private val params: MutableList<Any> = LinkedList<Any>()
+    private val params: MutableList<JsonElement> = mutableListOf()
 
-	override fun paramCount() = params.size
+    override fun paramCount() = params.size
 
-	fun paramEntry(value:Any): RequestArray {
-		params.add(value)
-		return this
-	}
+    fun paramEntry(value: JsonElement): RequestArray {
+        params.add(value)
+        return this
+    }
 
-	override fun serialise(): JSON = JSONArray(params)
+    override fun serialise(): JsonElement = JsonArray(params)
 }
